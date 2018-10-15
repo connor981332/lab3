@@ -28,9 +28,12 @@
       </ul>
     </div>
     <div class='ExtraDirective container-fluid'>
-      <p>
-        Something very important is going to go here.
-      </p>
+      <h2 class='TopHeader'>Custom Directive</h2>
+      <p>Post a comment!</p>
+      <form class='MainForm' name='userForm' ng-submit='addNew(userForm)'>
+        <input placeholder='Comment' ng-model='userForm.name'/>
+        <button type='submit'>Post</button>
+      </form>
     </div>
   </body>
 </html>
