@@ -1,5 +1,6 @@
 .User-list {
   list-style: none;
+  padding: 50px;
 }
 
 .Avatar {
@@ -15,4 +16,28 @@
 .Avatar h4 {
   text-transform: capitalize;
   color: red;
+}
+
+.MainContent {
+  background-color: orange;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.TopHeader {
+  border-style: solid;
+  border-radius: 5px;
+  width: 400px;
+  margin: auto;
+}
+
+.MainForm {
+  padding-top: 10px;
+}
+
+.ExtraDirective {
+  text-align: center;
+  background-color: #49D9E9;
+  padding: 25px;
 }

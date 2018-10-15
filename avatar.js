@@ -20,9 +20,11 @@ function mainCtrl ($scope) {
   $scope.addNew = function (user) {
     $scope.users.push({
       name: user.name,
+      email: user.email,
       avatarUrl: user.url
     }); /* [1] */
     user.name = ''; /* [2] */
+    user.email = ''; /* [2] */
     user.url = ''; /* [2] */
   };
 }
@@ -38,6 +40,7 @@ function avatarDirective () {
       '<div class="Avatar">' +
         '<img ng-src="{{user.avatarUrl}}" />' +
         '<h4>{{user.name}}</h4>' +
+        '<h4>{{user.email}}</h4>' +
       '</div>'
     ), /* [3] */
     link: link
