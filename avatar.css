@@ -8,9 +8,9 @@
 }
 
 .Avatar img {
-  width: 50px
-  height: 50px
-  border-radius: 50%
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .Avatar h4 {
@@ -40,4 +40,15 @@
   text-align: center;
   background-color: #49D9E9;
   padding: 25px;
+}
+
+.CustomDirectiveDescription {
+  padding-top: 10px;
+}
+
+.Comment {
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto;
 }

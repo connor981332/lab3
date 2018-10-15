@@ -1,9 +1,11 @@
 angular.module('app', [])
   .controller('mainCtrl', mainCtrl)
-  .directive('avatar', avatarDirective);
+  .directive('avatar', avatarDirective)
+  .directive('comment', commentsDirective);
 
 function mainCtrl ($scope) {
   $scope.users = [];
+  $scope.comments = [];
   $scope.addNew = function (user) {
     $scope.users.push({
       name: user.name,
@@ -14,9 +16,17 @@ function mainCtrl ($scope) {
     user.email = ''; /* [2] */
     user.url = ''; /* [2] */
   };
+
+  $scope.addComment = function (comment) {
+    console.log(comment.comment);
+    $scope.comments.push(comment.comment);
+    comment.comment = '';
+  }
+
 }
 
 function avatarDirective () {
+  console.log("we are calling the avatar directive");
   return {
     scope: {
       user: '=' /* [1] */
@@ -39,4 +49,20 @@ function avatarDirective () {
     }
   }
 
+}
+
+function commentsDirective () {
+  console.log("we are calling the comment directive");
+  return {
+    scope: {
+      comment: '='
+    },
+    restrict: 'E',
+    replace: 'true',
+    template: (
+      '<div class = "Comment">' +
+        '<h4>{{comment}}</h4>' +
+      '</div>'
+    )
+  };
 }

@@ -6,7 +6,6 @@
     <script src="avatar.js"></script>
     <link rel="stylesheet" type="text/css" href="avatar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <title>User Avatar Template</title>
   </head>
@@ -23,17 +22,22 @@
       </div>
       <ul class='User-list'>
         <li ng-repeat='user in users'>
-          <avatar user='user' />
+          <avatar user='user'></avatar>
         </li>
       </ul>
-    </div>
-    <div class='ExtraDirective container-fluid'>
-      <h2 class='TopHeader'>Custom Directive</h2>
-      <p>Post a comment!</p>
-      <form class='MainForm' name='userForm' ng-submit='addNew(userForm)'>
-        <input placeholder='Comment' ng-model='userForm.name'/>
-        <button type='submit'>Post</button>
-      </form>
+      <div class='ExtraDirective container-fluid'>
+        <h2 class='TopHeader'>Custom Directive</h2>
+        <p>Post a comment!</p>
+        <form class='MainForm' name='commentForm' ng-submit='addComment(commentForm)'>
+          <input placeholder='Comment' ng-model='commentForm.comment'/>
+          <button type='submit'>Post</button>
+        </form>
+      </div>
+      <ul class='User-list'>
+        <li ng-repeat='comment in comments'>
+          <comment comment='comment'></comment>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
